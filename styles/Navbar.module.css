@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.active {
+  border-bottom: 2px solid black;
+}
+.titre {
+  width: auto;
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: auto;
+}
+.navbar a {
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+.navbar a:hover {
+  color: red;
+}
