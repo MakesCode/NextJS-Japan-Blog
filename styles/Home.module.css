@@ -1,6 +1,7 @@
 .bloc_titre {
   display: flex;
   position: relative;
+  margin-bottom: 2rem;
 }
 .titre {
   width: 300px;
@@ -14,10 +15,22 @@
   z-index: -1;
   right: 0;
 }
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item {
+  width: 200px;
+  margin-bottom: 1rem;
+}
 @media (min-width: 500px) {
   .circle {
     width: 140px;
     height: 140px;
+  }
+  .item {
+    width: 350px;
   }
 }
 @media (min-width: 1000px) {
@@ -31,5 +44,12 @@
     margin-left: 7rem;
     font-size: 4.5rem;
     width: 600px;
+  }
+  .blog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
