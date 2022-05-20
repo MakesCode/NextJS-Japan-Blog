@@ -26,3 +26,11 @@
 .navbar a:hover {
   color: red;
 }
+@media (min-width: 1000px) {
+  .titre {
+    font-size: 2rem;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+  }
+}

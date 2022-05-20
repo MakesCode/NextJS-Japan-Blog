@@ -1,0 +1,35 @@
+.bloc_titre {
+  display: flex;
+  position: relative;
+}
+.titre {
+  width: 300px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: brown;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+}
+@media (min-width: 500px) {
+  .circle {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (min-width: 1000px) {
+  .circle {
+    right: 150px;
+    top: 50px;
+    width: 200px;
+    height: 200px;
+  }
+  .titre {
+    margin-left: 7rem;
+    font-size: 4.5rem;
+    width: 600px;
+  }
+}
