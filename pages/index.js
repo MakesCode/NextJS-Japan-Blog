@@ -1,5 +1,6 @@
 import style from '../styles/Home.module.css'
 import Image from 'next/image'
+import Link from "next/link";
 
 
 export default function Home({ posts }) {
@@ -14,8 +15,11 @@ export default function Home({ posts }) {
           posts.blogListe.map(post => (
             <div key={post.id} className={style.item}>
               <Image src={post.image} layout='responsive' width={'500px'} height={'500px'} />
-              <h1>{post.titre}</h1>
+              <h1 className={style.titre_item}>{post.titre}</h1>
               <p>{post.description.slice(0, 150)}...</p>
+              <Link href={`blog/${post.id}`}>
+                Voir l'articles
+              </Link>
             </div>
           ))
         }
