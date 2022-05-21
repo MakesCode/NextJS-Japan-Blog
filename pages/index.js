@@ -7,11 +7,11 @@ export default function Home({ posts }) {
   return (
     <main >
       <div className={style.bloc_titre}>
-        <h1 className={style.titre}>{posts.blogListe.length} façons incroyables de voir le Japon</h1>
+        <h1 className={style.titre}>{posts && posts.blogListe.length} façons incroyables de voir le Japon</h1>
         <div className={style.circle} />
       </div>
       <div className={style.blog}>
-        {
+        {posts &&
           posts.blogListe.map(post => (
             <div key={post.id} className={style.item}>
               <Image src={post.image} layout='responsive' width={'500px'} height={'500px'} placeholder="blur" blurDataURL={post.image} />
@@ -29,7 +29,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/blog')
+  const res = await fetch(`${process.env.API_LOCAL}/blog`)
   const posts = await res.json()
 
   return {
