@@ -29,7 +29,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.API_LOCAL}/blog`)
+  const res = await fetch(`${process.env.API_PUBLIC}/blog`)
   const posts = await res.json()
 
   return {
