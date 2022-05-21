@@ -14,7 +14,7 @@ export default function Home({ posts }) {
         {
           posts.blogListe.map(post => (
             <div key={post.id} className={style.item}>
-              <Image src={post.image} layout='responsive' width={'500px'} height={'500px'} />
+              <Image src={post.image} layout='responsive' width={'500px'} height={'500px'} placeholder="blur" blurDataURL={post.image} />
               <h1 className={style.titre_item}>{post.titre}</h1>
               <p>{post.description.slice(0, 150)}...</p>
               <Link href={`blog/${post.id}`}>

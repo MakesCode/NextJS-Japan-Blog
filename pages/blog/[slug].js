@@ -1,9 +1,19 @@
+import Image from "next/image"
+import style from '../../styles/Article.module.css'
+
+
 export default function Article({ post }) {
   return (
-    <>
-      <h1>{post.titre}</h1>
-      <p>{post.description}</p>
-    </>
+    <main className={style.main}>
+      <div className={style.image} >
+        <Image src={post.image} layout='responsive' width={'700px'} height={'700px'} placeholder="blur" blurDataURL={post.image} />
+      </div>
+      <div className={style.content} >
+        <h1>{post.titre}</h1>
+        <p>{post.description}</p>
+      </div>
+
+    </main>
   )
 }
 
