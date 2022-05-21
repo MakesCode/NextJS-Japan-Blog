@@ -22,7 +22,7 @@ export default function Article({ post }) {
 
 export async function getStaticProps(context) {
   const id = context.params.slug
-  const res = await fetch(`${process.env.API_PUBLIC}/blog/${id}`)
+  const res = await fetch(`/blog/${id}`)
   const post = await res.json()
 
   return {
